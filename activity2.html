@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Json and JS Asynchronous</title>
+</head>
+<body>
+<h1>JS callbacks</h1>
+<p id="result"></p>
+<script>
+function display(value){
+    document.getElementById("result").innerHTML=value;
+}
+function calc(sum1,sum2,callback){
+let sum=sum1+sum2;
+callback(sum);
+}
+calc(4,8,display)
+</script>
+</body>
+</html>

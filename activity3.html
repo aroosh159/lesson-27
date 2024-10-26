@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Json and JS Asynchronous</title>
+</head>
+<body>
+    <center>
+<h1>JS Promises</h1>
+<p id="demo"></p>
+    </center>
+<script>
+function display(s){
+    document.getElementById("demo").innerHTML=s;    
+}
+function sum(a,b){
+    var sum=a+b;
+    display(sum);
+}
+let myPromise=new Promise(function(myResolve,myReject){
+    let x=0;
+    if(x==0){
+   myResolve("SUCCESS");
+    }else{
+        myReject("Error");
+    }
+})
+    myPromise.then(
+        function(value){sum(5,8);
+    },
+    function(error){
+        sum(error);
+    }
+    )
+</script>
+</body>
+</html>
